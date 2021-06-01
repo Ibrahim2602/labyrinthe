@@ -15,18 +15,17 @@ public class TestElementsPartie {
             
             // Création de la fenêtre de jeu 
             int nbJoueurs=((Integer)parametres[0]).intValue(); // Récupération du nombre de joueurs
-            IG.creerFenetreJeu("- TestElementsPartie",nbJoueurs);            //creation et mise en place des pieces du plateau
-            Plateau plateau = new Plateau();
-            Piece pieceHorsPlateau=plateau.placerPiecesAleatoierment();
+            IG.creerFenetreJeu("- TestElementsPartie",nbJoueurs);
+            //creation et mise en place des pieces du plateau
             Joueur joueurs[]=Joueur.nouveauxJoueurs(parametres);
-            Objet[] tab = Objet.nouveauxObjets();
-            ElementsPartie elementsPartie=new ElementsPartie(joueurs);
+            Objet[] tabObjet = Objet.nouveauxObjets();
+            ElementsPartie elementsPartie = new ElementsPartie(joueurs);
             for (int i=0; i<7; i++){
                 for (int j=0; j<7; j++){
-                    IG.changerPiecePlateau(i, j, plateau.getPiece(i,j).getModelePiece(), plateau.getPiece(i,j).getOrientationPiece());
+                    IG.changerPiecePlateau(i, j, elementsPartie.getPlateau().getPiece(i,j).getModelePiece(), elementsPartie.getPlateau().getPiece(i,j).getOrientationPiece());
                 }
             }
-            IG.changerPieceHorsPlateau(pieceHorsPlateau.getModelePiece(), pieceHorsPlateau.getOrientationPiece());
+            IG.changerPieceHorsPlateau(elementsPartie.getPieceLibre().getModelePiece(), elementsPartie.getPieceLibre().getOrientationPiece());
             
             // creation et placement des joueurs
             if (nbJoueurs==2){
@@ -51,10 +50,16 @@ public class TestElementsPartie {
                 IG.changerImageJoueur(i,numImageJoueur);
             }
 
-            for (int i = 0; i<tab.length; i++){
-                IG.placerObjetPlateau(tab[i].getNumeroObjet(),tab[i].getPosconnePlateau(), tab[i].getPoslePlateau());
-            }
             
+            for (int i = 0; i<tabObjet.length; i++){
+                IG.placerObjetPlateau(tabObjet[i].getNumeroObjet(),tabObjet[i].getPosconnePlateau(), tabObjet[i].getPoslePlateau());
+            }
+
+            for(int j= 0; j<(tabObjet.length/nbJoueurs); j++ ){
+                IG.changerObjetJoueur(0,joueurs[0].getObjetsJoueur()[j].getNumeroObjet(), j);
+                IG.changerObjetJoueur(1,joueurs[1].getObjetsJoueur()[j].getNumeroObjet(), j);
+                IG.changerObjetJoueur(2,joueurs[2].getObjetsJoueur()[j].getNumeroObjet(), j);
+            }
 
 
             IG.rendreVisibleFenetreJeu();  // On rend visible la fenêtre de jeu
@@ -68,6 +73,18 @@ public class TestElementsPartie {
             IG.afficherMessage(message); // On change de message de la fenêtre de jeu
             IG.miseAJourAffichage(); // On effectue le rafraichissement de la fenêtre de jeu
             IG.attendreClic();
+
+            int choix = IG.attendreChoixEntree();
+            elementsPartie.insertionPieceLibre(choix);
+
+            for (int i=0; i<7; i++){
+                for (int j=0; j<7; j++){
+                    IG.changerPiecePlateau(i, j, elementsPartie.getPlateau().getPiece(i,j).getModelePiece(), elementsPartie.getPlateau().getPiece(i,j).getOrientationPiece());
+                }
+            }
+            IG.changerPieceHorsPlateau(elementsPartie.getPieceLibre().getModelePiece(), elementsPartie.getPieceLibre().getOrientationPiece());
+            
+            IG.miseAJourAffichage();
 
             IG.attendreClic();
             IG.fermerFenetreJeu();
