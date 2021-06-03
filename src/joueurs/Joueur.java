@@ -11,25 +11,25 @@ import partie.ElementsPartie;
  */
 public abstract class Joueur {
 	
-	private int numJoueur; // le numéro du jouer
+	private int numJoueur; // le numÃ©ro du jouer
 	private String nomJoueur; // Le nom du joueur
-	private int numeroImagePersonnage; // Le numéro de l'image représentant le joueur
-	private Objet objetsJoueur[]; // Les objets qui sont attribués au joueur et qui devront être récupérés dans l'ordre
-	private int nombreObjetsRecuperes; // le nombre d'objets récupérés
-	private int posLigne; // La ligne correspondant à  la position du joueur sur le plateau
-	private int posColonne; // La colonne correspondant à  la position du joueur sur le plateau
+	private int numeroImagePersonnage; // Le numÃ©ro de l'image reprÃ©sentant le joueur
+	private Objet objetsJoueur[]; // Les objets qui sont attribuÃ©s au joueur et qui devront Ãªtre rÃ©cupÃ©rÃ©s dans l'ordre
+	private int nombreObjetsRecuperes; // le nombre d'objets rÃ©cupÃ©rÃ©s
+	private int posLigne; // La ligne correspondant Ã  la position du joueur sur le plateau
+	private int posColonne; // La colonne correspondant Ã  la position du joueur sur le plateau
 
 	/**
-	 * A Faire (25/05/2021 IB Finalisee)
-	 * Constructeur permettant de créer un joueur à  partir de son nom, son type et 
-	 * le numéro de l'image le représentant. La position du joueur sur le plateau doit être
-	 * également indiquée. Aucun objet n'est attribué au joueur (l'attribut objetsJoueur vaudra null après la construction du joueur).
+	 * A Faire (25/05/2021 SA Finalisee)
+	 * Constructeur permettant de crÃ©er un joueur Ã  partir de son nom, son type et 
+	 * le numÃ©ro de l'image le reprÃ©sentant. La position du joueur sur le plateau doit Ãªtre
+	 * Ã©galement indiquÃ©e. Aucun objet n'est attribuÃ© au joueur (l'attribut objetsJoueur vaudra null aprÃ¨s la construction du joueur).
 	 * 
-	 * @param numJoueur Le numéro du joueur.
+	 * @param numJoueur Le numÃ©ro du joueur.
 	 * @param nomJoueur Le nom du joueur.
-	 * @param numeroImagePersonnage Le numéro de l'image représentant le joueur.
-	 * @param posLignePlateau La ligne du plateau sur laquelle est positionnée le joueur.
-	 * @param posColonnePlateau La colonne du plateau sur laquelle est positionnés le joueur.
+	 * @param numeroImagePersonnage Le numÃ©ro de l'image reprÃ©sentant le joueur.
+	 * @param posLignePlateau La ligne du plateau sur laquelle est positionnÃ©e le joueur.
+	 * @param posColonnePlateau La colonne du plateau sur laquelle est positionnÃ©s le joueur.
 	 */
 	public Joueur(int numJoueur,String nomJoueur, int numeroImagePersonnage,int posLignePlateau,int posColonnePlateau) {
 		this.numJoueur = numJoueur;
@@ -82,11 +82,11 @@ public abstract class Joueur {
 
 	/**
 	 * 
-	 * A Faire (25/05/2021 IB Finalisee)
+	 * A Faire (25/05/2021 SA Finalisee)
 	 *  
-	 * Méthode retournant le nombre d'objets récupérés par le joueur.
+	 * MÃ©thode retournant le nombre d'objets rÃ©cupÃ©rÃ©s par le joueur.
 	 * 
-	 * @return Le nombre d'objets récupérés par le joueur.
+	 * @return Le nombre d'objets rÃ©cupÃ©rÃ©s par le joueur.
 	 */
 	public int getNombreObjetsRecuperes() {
 		return nombreObjetsRecuperes;
@@ -94,9 +94,9 @@ public abstract class Joueur {
 
 
 	/**
-	 * A Faire (25/05/2021 IB Finalisee)
+	 * A Faire (25/05/2021 SA Finalisee)
 	 *  
-	 * Méthode retournant la ligne du plateau sur laquelle se trouve le joueur.
+	 * MÃ©thode retournant la ligne du plateau sur laquelle se trouve le joueur.
 	 * @return  La ligne du plateau sur laquelle se trouve le joueur.
 	 */
 	public int getPosLigne() {
@@ -105,9 +105,9 @@ public abstract class Joueur {
 
 
 	/**
-	 * A Faire (25/05/2021 IB Finalisee)
+	 * A Faire (25/05/2021 SA Finalisee)
 	 * 
-	 * Méthode retournant la colonne du plateau sur laquelle se trouve le joueur.
+	 * MÃ©thode retournant la colonne du plateau sur laquelle se trouve le joueur.
 	 * @return La colonne du plateau sur laquelle se trouve le joueur.
 	 */
 	public int getPosColonne() {
@@ -116,8 +116,8 @@ public abstract class Joueur {
 
 
 	/**
-	 * A Faire (25/05/2021 IB Finalisee)
-	 * Méthode retournant le nom du joueur.
+	 * A Faire (25/05/2021 SA Finalisee)
+	 * MÃ©thode retournant le nom du joueur.
 	 * @return Le nom du joueur.
 	 */
 	public String getNomJoueur() {
@@ -125,10 +125,10 @@ public abstract class Joueur {
 	}
 
 	/**
-	 * A Faire (25/05/2021 IB Finalisee)
+	 * A Faire (25/05/2021 SA Finalisee)
 	 * 
-	 * Méthode retournant le numéro de l'image représentant le joueur.
-	 * @return Le numéro de l'image représentant le joueur.
+	 * MÃ©thode retournant le numÃ©ro de l'image reprÃ©sentant le joueur.
+	 * @return Le numÃ©ro de l'image reprÃ©sentant le joueur.
 	 */
 	public int getNumeroImagePersonnage() {
 		return numeroImagePersonnage; // A Modifier
@@ -190,11 +190,11 @@ public abstract class Joueur {
 	
 
 	/**
-	 * A Faire (25/05/2021 IB Finalisee)
+	 * A Faire (25/05/2021 SA Finalisee)
 	 * 
-	 * Méthode retournant le numéro du joueur.
+	 * MÃ©thode retournant le numÃ©ro du joueur.
 	 * 
-	 * @return Le numéro du joueur.
+	 * @return Le numÃ©ro du joueur.
 	 */
 	public int getNumJoueur(){
 		return numJoueur; // A Modifier

@@ -16,7 +16,7 @@ public class TestObjet {
 		IG.creerFenetreJeu("Test Objet",nbJoueurs); // On crée la fenêtre
 		IG.rendreVisibleFenetreJeu();  // On rend visible la fenêtre de jeu
 
-        	// Affichage d'un message
+        		// Affichage d'un message
 		String message[]={
             "",
             "Cliquer pour continuer ...",

@@ -15,7 +15,6 @@ public class TestPiece {
 		// Création de la fenêtre de jeu et affichage de la fenêtre 
 		int nbJoueurs=((Integer)parametres[0]).intValue(); // Récupération du nombre de joueurs
 		IG.creerFenetreJeu("Test Pieces",nbJoueurs); // On crée la fenêtre
-		IG.rendreVisibleFenetreJeu();  // On rend visible la fenêtre de jeu
 
         		// Affichage d'un message
 		String message[]={

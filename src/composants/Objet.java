@@ -110,8 +110,8 @@ public class Objet {
 	 * @param connePlateau Un entier compris entre 0 et 6.
 	 */
 	public void positionneObjet(int lePlateau,int connePlateau){
-		poslePlateau = lePlateau;
-		posconnePlateau = connePlateau;
+		this.poslePlateau = lePlateau;
+		this.posconnePlateau = connePlateau;
 		surPlateau = true;
 	}
 
