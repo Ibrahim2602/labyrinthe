@@ -45,10 +45,9 @@ public class JoueurOrdinateurT2 extends JoueurOrdinateur {
 		return nouveauJoueur;
 	}
 
-	/**
-	 * Saisies de l'orientation de la pièce hors plateau et de l'entrée dans le plateau : on retourne toujours 3 pour l'entrée du plateau (la flÃªche du haut)
-	 * et l'orientation courante de la pièce hors plateau de l'interface graphique.
-	 */
+
+	 
+	 
 	@Override
 	public int[] choisirOrientationEntree(ElementsPartie elementsPartie) {
 		int resultat[]=new int[2];

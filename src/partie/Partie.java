@@ -130,7 +130,7 @@ public class Partie {
 			//boucle de tours des joueurs de la partie
 			for(int numJoueurs = 0; numJoueurs < nbJoueurs; numJoueurs ++){
 				// deplacement pour les joueurs type Humain
-				if(joueurs[numJoueurs].getCategorie()=="Humain" ){
+				if(joueurs[numJoueurs].getCategorie()!="OrdiType3" && joueurs[numJoueurs].getCategorie()!="OrdiType2" && joueurs[numJoueurs].getCategorie()!="OrdiType1" && joueurs[numJoueurs].getCategorie()!="OrdiType0"){
 					String messageJoueur[]={ // Le joueur qui doit jouer
 					"",
 					"Au tour de " + joueurs[numJoueurs].getNomJoueur(),
@@ -143,7 +143,6 @@ public class Partie {
 					IG.changerObjetSelectionne(tabObjet[joueurs[numJoueurs].getObjetsJoueur()[joueurs[numJoueurs].getNombreObjetsRecuperes()].getNumeroObjet()].getNumeroObjet());
 					IG.miseAJourAffichage();
 					IG.attendreClic();
-
 	
 					// choix de la l'orientation de la piece hors plateau et de la flèche
 					String messagePieceHorsPlateau[]={
@@ -234,6 +233,7 @@ public class Partie {
 
 					int	choix = joueurs[numJoueurs].choisirOrientationEntree(elementsPartie)[1];
 					elementsPartie.getPieceLibre().setOrientation(joueurs[numJoueurs].choisirOrientationEntree(elementsPartie)[0]);
+					System.out.println(choix + "  ");
 					elementsPartie.insertionPieceLibre(choix);
 					// indication de l'endroit de l'insertion pour les autres joueurs
 					String messageInsertionOrdi[]={

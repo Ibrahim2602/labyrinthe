@@ -20,7 +20,7 @@ public class Utils {
 	 * @return Un nombre entier compris entre 0 et max (inclus).
 	 */
 	public static int genererEntier(int max){
-		return generateur.nextInt(max);
+		return generateur.nextInt(max+1);
 	}
 	/**
 	 * A Faire (07/05/21 EH finalisée)
@@ -39,7 +39,7 @@ public class Utils {
 			}
 			for (int i=0; i<longTab;i++){
 				int temp = tab[i];
-				int temp2 = genererEntier(longTab);
+				int temp2 = genererEntier(longTab-1);
 				tab[i] = tab[temp2];
 				tab[temp2] = temp;
 			}
