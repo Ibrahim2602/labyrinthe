@@ -3,6 +3,7 @@ package joueurs;
 import composants.Objet;
 import composants.Plateau;
 import composants.Utils;
+import grafix.interfaceGraphique.IG;
 import partie.ElementsPartie;
 
 /**
@@ -33,6 +34,13 @@ public class JoueurOrdinateurT1 extends JoueurOrdinateur {
 	@Override
 	public String getCategorie() {
 		return "OrdiType1";
+	}
+	@Override
+	public int[] choisirOrientationEntree(ElementsPartie elementsPartie){
+		int resultat[]=new int[2];
+		resultat[1]=3;
+		resultat[0]=IG.recupererOrientationPieceHorsPlateau();
+		return resultat;
 	}
 
 	

@@ -1,5 +1,5 @@
 package joueurs;
-
+import grafix.interfaceGraphique.IG;
 import composants.Objet;
 import composants.Piece;
 import composants.Plateau;
@@ -45,4 +45,31 @@ public class JoueurOrdinateurT2 extends JoueurOrdinateur {
 		return nouveauJoueur;
 	}
 
+	/**
+	 * Saisies de l'orientation de la pièce hors plateau et de l'entrée dans le plateau : on retourne toujours 3 pour l'entrée du plateau (la flÃªche du haut)
+	 * et l'orientation courante de la pièce hors plateau de l'interface graphique.
+	 */
+	@Override
+	public int[] choisirOrientationEntree(ElementsPartie elementsPartie) {
+		int resultat[]=new int[2];
+		for (int fleche=0;fleche<=27;fleche++ ){ // teste les 27 entrees du plateau
+			for (int rotation=0;rotation<)
+
+		}
+		return resultat;
+	}
+
+	
+	/**
+	 * Saisie de la case d'arrivée réalisée : retourne toujours la position du joueur.
+	 */
+	@Override
+	public int[] choisirCaseArrivee(ElementsPartie elementsPartie) {
+		int resultat[]=new int[2];
+		resultat[0]=this.getPosLigne();
+		resultat[1]=this.getPosColonne();
+		return resultat;
+	}
+
+	
 }

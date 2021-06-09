@@ -6,7 +6,7 @@ import partie.ElementsPartie;
 
 /**
  * 
- * Cette classe permet de reprÃ©senter un joueur ordinateur gÃ©nÃ©rique et basique.
+ * Cette classe permet de représenter un joueur ordinateur générique et basique.
  * 
  * @author Jean-FranÃ§ois Condotta - 2021
  *
@@ -15,13 +15,13 @@ import partie.ElementsPartie;
 public abstract class JoueurOrdinateur extends Joueur {
 
 	/**
-	 * Constructeur permettant de crÃ©er un joueur.
+	 * Constructeur permettant de créer un joueur.
 	 * 
-	 * @param numJoueur Le numÃ©ro du joueur (un entier compris entre 0 et 2).
+	 * @param numJoueur Le numéro du joueur (un entier compris entre 0 et 2).
 	 * @param nomJoueur Le nom du joueur.
-	 * @param numeroImagePersonnage Le numÃ©ro de l'image reprÃ©sentant le joueur.
-	 * @param posLignePlateau La ligne du plateau sur laquelle est positionnÃ©e le joueur.
-	 * @param posColonnePlateau La colonne du plateau sur laquelle est positionnÃ©e le joueur.
+	 * @param numeroImagePersonnage Le numéro de l'image représentant le joueur.
+	 * @param posLignePlateau La ligne du plateau sur laquelle est positionnée le joueur.
+	 * @param posColonnePlateau La colonne du plateau sur laquelle est positionnée le joueur.
 	 */
 	public JoueurOrdinateur(int numJoueur,String nomJoueur, int numeroImagePersonnage,int posLignePlateau,int posColonnePlateau) {
 				super(numJoueur,nomJoueur, numeroImagePersonnage,posLignePlateau,posColonnePlateau);
@@ -33,8 +33,8 @@ public abstract class JoueurOrdinateur extends Joueur {
 	}
 
 	/**
-	 * Saisies de l'orientation de la piÃ¨ce hors plateau et de l'entrÃ©e dans le plateau : on retourne toujours 3 pour l'entrÃ©e du plateau (la flÃªche du haut)
-	 * et l'orientation courante de la piÃ¨ce hors plateau de l'interface graphique.
+	 * Saisies de l'orientation de la pièce hors plateau et de l'entrée dans le plateau : on retourne toujours 3 pour l'entrée du plateau (la flÃªche du haut)
+	 * et l'orientation courante de la pièce hors plateau de l'interface graphique.
 	 */
 	@Override
 	public int[] choisirOrientationEntree(ElementsPartie elementsPartie) {
@@ -46,7 +46,7 @@ public abstract class JoueurOrdinateur extends Joueur {
 
 	
 	/**
-	 * Saisie de la case d'arrivÃ©e rÃ©alisÃ©e : retourne toujours la position du joueur.
+	 * Saisie de la case d'arrivée réalisée : retourne toujours la position du joueur.
 	 */
 	@Override
 	public int[] choisirCaseArrivee(ElementsPartie elementsPartie) {
