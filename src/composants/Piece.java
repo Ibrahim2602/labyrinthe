@@ -126,6 +126,7 @@ abstract public class Piece {
 			}else{
 				pieces[i]=new PieceM2();
 			}
+			pieces[i].setOrientation(Utils.genererEntier(3));
 		}
 		return pieces;
 	}

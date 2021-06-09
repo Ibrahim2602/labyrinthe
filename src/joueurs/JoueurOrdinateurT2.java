@@ -35,19 +35,6 @@ public class JoueurOrdinateurT2 extends JoueurOrdinateur {
 		return "OrdiType2";
 	}
 
-
-	@Override
-	public Joueur copy(Objet objets[]){
-		Joueur nouveauJoueur=new JoueurOrdinateurT2(getNumJoueur(),getNomJoueur(), getNumeroImagePersonnage(),getPosLigne(),getPosColonne());
-		nouveauJoueur.setObjetsJoueur(this.getObjetsJoueurGeneral(objets));
-		while (nouveauJoueur.getNombreObjetsRecuperes()!=this.getNombreObjetsRecuperes())
-			nouveauJoueur.recupererObjet();
-		return nouveauJoueur;
-	}
-
-
-	 
-	 
 	@Override
 	public int[] choisirOrientationEntree(ElementsPartie elementsPartie) {
 		int resultat[]=new int[2];
@@ -114,9 +101,6 @@ public class JoueurOrdinateurT2 extends JoueurOrdinateur {
 		return resultat;
 	}
 	
-	/**
-	 * Saisie de la case d'arrivée réalisée : retourne toujours la position du joueur.
-	 */
 	@Override
 	public int[] choisirCaseArrivee(ElementsPartie elementsPartie) {
 		int[] resultatMethode = new int[2];
@@ -194,5 +178,12 @@ public class JoueurOrdinateurT2 extends JoueurOrdinateur {
 		return resultatMethode;
 	}
 
-	
+	@Override
+	public Joueur copy(Objet objets[]){
+		Joueur nouveauJoueur=new JoueurOrdinateurT2(getNumJoueur(),getNomJoueur(), getNumeroImagePersonnage(),getPosLigne(),getPosColonne());
+		nouveauJoueur.setObjetsJoueur(this.getObjetsJoueurGeneral(objets));
+		while (nouveauJoueur.getNombreObjetsRecuperes()!=this.getNombreObjetsRecuperes())
+			nouveauJoueur.recupererObjet();
+		return nouveauJoueur;
+	}
 }
