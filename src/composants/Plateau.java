@@ -129,6 +129,8 @@ public class Plateau {
 	 * le second entier qui correspond à  la colonne de la case. La première case d'un chemin retourné correspond toujours 
 	 * à  la case (posLigCaseDep,posColCaseDep) et la dernière case correspond toujours à  la case (posLigCaseArr,posColCaseArr).
 	 *
+	 * 3
+	 * 3
 	 * @param posLigCaseDep La ligne de la case de départ (un entier compris entre 0 et 6).
 	 * @param posColCaseDep La colonne de la case de départ (un entier compris entre 0 et 6).
 	 * @param posLigCaseArr La ligne de la case d'arrivée (un entier compris entre 0 et 6).
